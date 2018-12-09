@@ -1,0 +1,196 @@
+%%%%%%%%%%%%%%%%%
+% This is an example CV created using altacv.cls (v1.1.4, 27 July 2018) written by
+% LianTze Lim (liantze@gmail.com), based on the
+% Cv created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you want to use \orcid or the
+%% academicons icons, add "academicons"
+%% to the \documentclass options.
+%% Then compile with XeLaTeX or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,letterpaper]{altacv}
+
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages.
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols.
+%% When using the "academicons" option,
+%% Compile with LuaLaTeX for best results. If you
+%% want to use XeLaTeX, you may need to install
+%% Academicons.ttf in your operating system's font %% folder.
+
+
+% Change the page layout if you need to
+\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1cm,bottom=1cm}
+
+% Change the font if you want to.
+
+% If using pdflatex:
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato}
+\usepackage{hyperref}
+
+% If using xelatex or lualatex:
+% \setmainfont{Lato}
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{3E0097}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{VividPurple}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+
+\begin{document}
+\name{Jennifer Page}
+\tagline{Software Architect}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{jenipage1989@gmail.com}
+  \phone{+1 (978) 290-0361}
+  \linkedin{linkedin.com/in/jenipage}
+  \github{github.com/jmpage} % I'm just making this up though.
+}
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+\makecvheader
+\end{fullwidth}
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+\cvsection[jenpage-p1sidebar]{Experience}
+
+\cvevent{Software Architect}{Lola}{March 2017 -- Ongoing}{Boston, MA}
+\begin{itemize}
+\item Ongoing project lead for load testing and flight search
+  performance improvements.
+\item Planned, gathered requirements and led teams in implementation
+  of multiple products including Trips and Back Office Processing.
+\item Led two engineers to improve the quality and accuracy of our
+  booking data (as reflected in airline PNRs) as well as reduce the
+  burden on our custom support team. We finished our project on time,
+  delivering several features ahead of schedule. These included the
+  ability to completly import an airline PNR into our system and the
+  ability to reflect changes on any part of a booking.
+\item Closely mentored two junior engineers and provided support to
+  many others, across teams.
+\item Standardized and spread best practices for GraphQL API
+  design and implementation, including the usage of delayed execution
+  to improve performance.
+\item Wrote a tool which performed black box performance testing on a
+  third party API. Analyzed the resulting data and made
+  recommendations which were used to improve our strategy for
+  maximizing flight search performance.
+\item Centralized and automated deployment for most backend services
+  as well as database migrations. These scripts eliminated problems
+  previously caused by human error and minimized the knowledge
+  required to correctly deploy and run migrations. I coordinated with
+  the devops team to hand over responsibility for these scripts which
+  they continued to maintain and port to work with new tools.
+\item Quickly investigated and fixed backend bugs encountered by the
+  support team, eventually becoming the defacto "goto" person for
+  bugs and receiving recognition.
+\item Advocated for and planned projects for various stakeholders to
+  aid in roadmap pitches.
+\item Successfully advocated for engineering process improvements to
+  on call and bug triage processes.
+\end{itemize}
+
+\divider
+
+\cvevent{Senior Software Engineer}{Localytics}{March 2015 -- March
+  2017}{Boston, MA}
+\begin{itemize}
+\item Designed new datapoint validation and enrichment pipeline with the goal of reducing faults and increasing maintainability.
+\item Led architectural design and implementation of improvements to profiles product.
+\item Automated post-fault recovery of several services, significantly reducing late-night pages and engineering burden.
+\item Engaged in architectural discussions for other systems.
+\item Led and helped teach guild for Functional Reactive Programming and Type Level Programming.
+\item As crew lead, led two other engineers in shipping Re-marketing v1.
+\item Mentored other developers in Scala and Ruby on Rails.
+\item Collaborated with and assisted devops team with design and architecture of permissions escalation/approval system which helped reduce workload on devops and empowered engineers to take devops work into their own hands.
+\end{itemize}
+
+\clearpage
+%\divider
+
+\cvevent{Software Engineer II}{PayPal}{June 2013 -- March
+  2015}{Boston, MA}
+\begin{itemize}
+\item Rewrote part of our application to increase reliability of synchronization with external services.
+\item Addressed security issues within our application and introduced the use of brakeman, a static code analysis tool, to our team's definition of done to help find potential issues before code review.
+\item Mentored new team members and coops using TDD and pair programming.
+\item Collaborated with stakeholders to ensure that our team took on features with the highest business value.
+\item Took ownership of a project to move our team's application to an OpsCode Chef based infrastructure pipeline. Organized milestones and a timeline which broke down the project into small pieces to allow the team to work concurrently. Aided our sister team in moving their application to the same pipeline through training and helping plan the move.
+\item Maintained a >99\% uptime for our application and increased test coverage to >95\% along with my team.
+\item Set up and configured a Jenkins server for continuous integration, security audits, deployments and creating releases.
+\item Presented a tech talk about Rabbit MQ and topic exchanges to help other teams understand how to bind their queues to our exchange to receive messages.
+\item Served as the Vice Chair of the Boston chapter of eBay Women in Technology (eWIT)
+\end{itemize}
+
+\cvsection{Open Source Contributions}
+
+\href{https://github.com/gilt/jerkson}{\textbf{jerkson}} \hfill
+{\footnotesize\addfontfeature{Color=lightgray} Scala} \\
+Rewrote and re-added test suite to fork of Codahale's jerkson library,
+bumped version of jackson dependency, incorporated various bug fixes
+from disparate forks.
+
+\divider
+
+\href{https://github.com/seratch/AWScala}{\textbf{AWScala}} \hfill
+{\footnotesize\addfontfeature{Color=lightgray} Scala} \\
+Added support for specifying credentials via
+\verb|ClientConfiguration|.
+
+\divider
+
+\href{https://github.com/ensime/ensime-emacs}{\textbf{ensime-emacs}}
+\hfill{\footnotesize \addfontfeature{Color=lightgray} Lisp} \\
+Various contributions to improve the ENSIME (Enhanced Scala and java
+Interaction Mode for text Editors) integration for Emacs.
+
+\divider
+
+\href{https://github.com/jmpage/capistrano_scm_nexus}{\textbf{capistrano\_scm\_nexus}} \hfill {\footnotesize\addfontfeature{Color=lightgray} Ruby Gem} \\
+Published a gem which allows Capistrano to deploy a release by
+downloading an artifact from Sonatype Nexus instead of using SCM.
+
+\divider
+
+\href{https://github.com/newrelic/rpm}{\textbf{newrelic\_rpm}} \hfill {\footnotesize\addfontfeature{Color=lightgray} Ruby Gem} \\
+Added Capistrano 3 support for deployment notification.
+
+\divider
+
+\href{https://github.com/thoughtbot/shoulda-matchers}{\textbf{shoulda-matchers}} \hfill {\footnotesize\addfontfeature{Color=lightgray} Ruby Gem} \\
+Fixed a bug in the \verb|validates_numericality_of| matcher and added a \verb|validates_absence_of| matcher.\\
+
+\end{document}
